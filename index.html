@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subhodip's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .typed-cursor { font-size: 1em; color: #0f766e; }
+    </style>
+</head>
+<body class="bg-[#fafaf9] text-gray-800 font-sans antialiased selection:bg-teal-600 selection:text-white">
+
+    <nav class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center sticky top-0 bg-[#fafaf9]/90 backdrop-blur-md z-50">
+        <div class="text-2xl font-bold italic tracking-tight text-gray-900">Subhodip.</div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium border border-gray-200 rounded-full px-6 py-2 bg-white/50">
+            <a href="#about" class="hover:text-teal-600 transition">ABOUT</a>
+            <a href="#creative" class="hover:text-teal-600 transition">CREATIVE</a>
+            <a href="#works" class="hover:text-teal-600 transition">WORKS</a>
+            <a href="#contact" class="hover:text-teal-600 transition">CONTACT</a>
+        </div>
+        <div class="text-sm font-semibold flex items-center gap-2">
+            <a href="#contact" class="bg-teal-700 text-white px-4 py-2 rounded-full hover:bg-teal-800 transition shadow-sm">Let's Talk</a>
+        </div>
+    </nav>
+
+    <header class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+            <p class="text-teal-700 font-medium mb-4 tracking-wider text-sm uppercase">Welcome to my universe</p>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight mb-8">
+                Hey There,<br>I'm <span id="typed-text" class="text-teal-700"></span>
+            </h1>
+            <div class="flex flex-wrap gap-4 mt-12">
+                <a href="#qualification" class="px-8 py-3 bg-gray-900 text-white font-medium rounded-full hover:bg-teal-700 transition shadow-lg">View Resume</a>
+                <a href="#works" class="px-8 py-3 bg-white text-gray-900 border border-gray-200 font-medium rounded-full hover:border-teal-600 transition">My Works</a>
+            </div>
+        </div>
+        
+        <div class="relative flex justify-center items-end pt-8">
+            
+            <div class="absolute inset-0 -z-10 flex items-center justify-center">
+                <div class="w-full h-full max-w-[500px] opacity-40" style="mask-image: radial-gradient(circle at center, black 30%, transparent 70%); -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 70%);">
+                    <svg class="w-full h-full text-teal-700" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="circuit-board" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+                                <path d="M10 10 L25 10 L35 20 L35 40 M25 10 L35 0 M10 50 L25 50 L35 40 L55 40 M55 20 L45 20 L35 30 L10 30" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="10" cy="10" r="2" fill="currentColor"/><circle cx="35" cy="40" r="1.5" fill="currentColor"/><circle cx="35" cy="0" r="2" fill="currentColor"/><circle cx="10" cy="50" r="2" fill="currentColor"/><circle cx="55" cy="40" r="2" fill="currentColor"/><circle cx="55" cy="20" r="2" fill="currentColor"/><circle cx="10" cy="30" r="2" fill="currentColor"/>
+                            </pattern>
+                        </defs>
+                        <rect x="0" y="0" width="100%" height="100%" fill="url(#circuit-board)"></rect>
+                    </svg>
+                </div>
+            </div>
+            
+            <img src="20260403_112337.png" alt="Subhodip" class="relative z-10 w-full max-w-sm drop-shadow-[0_20px_35px_rgba(0,0,0,0.4)] object-contain">
+            
+            <div class="absolute right-0 md:-right-8 bottom-16 bg-white p-5 rounded-2xl shadow-xl z-20 text-center flex flex-col items-center">
+                <div class="w-12 h-12 bg-gray-50 border border-gray-100 rounded-full flex items-center justify-center text-2xl mb-2 text-teal-700">
+                    <i class="fas fa-laptop-code text-lg"></i>
+                </div>
+                <p class="text-xs font-bold w-24 tracking-wider text-gray-800 uppercase">CS Student</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="bg-white py-24 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Behind the Code</h2>
+                <div class="space-y-4 text-gray-600 leading-relaxed">
+                    <p>
+                        I'm a 19-year-old Computer Science undergraduate currently in my 4th semester at Memari College. While my coursework is heavily rooted in core operating systems, Java, and DBMS, my curiosity extends far beyond the standard curriculum into the mechanics of security and systems. 
+                    </p>
+                    <p>
+                        You'll often find me experimenting within my Kali Linux environment, exploring network vulnerabilities like Evil Twin attacks, or bridging the gap between software and the physical world through hands-on Arduino and ESP8266 hardware projects. 
+                    </p>
+                    <p>
+                        I believe in a strong balance between mind and body. When I step away from the keyboard, I'm highly focused on hitting the gym, cutting video edits in Premiere Pro and After Effects, or unwinding with <em>Ghost of Tsushima</em>. I also have a deep fascination with the unknown—from reading up on Hindu mythology and Lovecraftian lore to diving down rabbit holes about quantum mechanics and black holes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-[#fafaf9] p-6 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                    <div class="text-3xl mb-3">🏋️‍♂️</div>
+                    <h4 class="font-bold text-gray-900">Fitness</h4>
+                    <p class="text-sm text-gray-500 mt-1">Dedicated to strength training and tracking progress.</p>
+                </div>
+                <div class="bg-[#fafaf9] p-6 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                    <div class="text-3xl mb-3">🎬</div>
+                    <h4 class="font-bold text-gray-900">Video Editing</h4>
+                    <p class="text-sm text-gray-500 mt-1">Crafting visual stories with Premiere Pro & After Effects.</p>
+                </div>
+                <div class="bg-[#fafaf9] p-6 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                    <div class="text-3xl mb-3">🪐</div>
+                    <h4 class="font-bold text-gray-900">Astrophysics</h4>
+                    <p class="text-sm text-gray-500 mt-1">Fascinated by quantum mechanics and the cosmos.</p>
+                </div>
+                <div class="bg-[#fafaf9] p-6 rounded-2xl border border-gray-100 hover:shadow-md transition">
+                    <div class="text-3xl mb-3">🦑</div>
+                    <h4 class="font-bold text-gray-900">Mythos & Lore</h4>
+                    <p class="text-sm text-gray-500 mt-1">Exploring ancient folklore and Lovecraftian fiction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="creative" class="py-24 bg-[#fafaf9] border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-bold mb-4 text-gray-900">Creative Canvas</h2>
+                    <p class="text-gray-500">A glimpse into my digital composition and Photoshop work.</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="rounded-2xl overflow-hidden shadow-lg group bg-white border border-gray-100">
+                    <div class="relative h-[500px] w-full overflow-hidden bg-gray-900">
+                        <img src="Instagram1 2026.png" alt="Surreal Moon and Jeep Composite" class="object-cover h-full w-full group-hover:scale-105 transition duration-700 opacity-95 group-hover:opacity-100">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm font-semibold text-teal-600 mb-1">Photoshop Composite</p>
+                        <h3 class="text-xl font-bold text-gray-900">Surreal Landscapes</h3>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg group bg-white border border-gray-100">
+                    <div class="relative h-[500px] w-full overflow-hidden bg-gray-900">
+                        <img src="Instagram1 2026-6.png" alt="Gritty Portrait Edit" class="object-cover h-full w-full group-hover:scale-105 transition duration-700 opacity-95 group-hover:opacity-100">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm font-semibold text-teal-600 mb-1">Portrait Retouching & Effects</p>
+                        <h3 class="text-xl font-bold text-gray-900">Urban Grayscale</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="qualification" class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">My Qualifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-2xl font-bold mb-8 text-teal-700 flex items-center gap-2">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </h3>
+                    <div class="border-l-2 border-teal-100 pl-6 space-y-10">
+                        <div class="relative">
+                            <div class="absolute -left-[33px] top-1 h-4 w-4 rounded-full bg-teal-600 ring-4 ring-white"></div>
+                            <span class="text-sm font-semibold text-teal-600 tracking-wider">CURRENT (4th Semester)</span>
+                            <h4 class="text-xl font-bold text-gray-900 mt-1">B.Sc. Hons. Computer Science</h4>
+                            <p class="text-gray-500 font-medium mb-2">Memari College</p>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Current coursework focuses on Core Operating Systems, Database Management Systems (DBMS), Java Programming, Mathematics, and Statistics. Successfully completed 3rd-semester modules including advanced Data Structures and Algorithms (DSA), Discrete Mathematics, and PHP.
+                            </p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[33px] top-1 h-4 w-4 rounded-full bg-gray-300 ring-4 ring-white"></div>
+                            <h4 class="text-xl font-bold text-gray-900 mt-1">High School Education</h4>
+                            <p class="text-gray-500 font-medium mb-2">Ajhapur High School</p>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Completed foundational secondary and higher secondary education, building strong analytical and mathematical skills.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-8 text-teal-700 flex items-center gap-2">
+                        <i class="fas fa-rocket"></i> Technical Expertise
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="bg-[#fafaf9] p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <h4 class="font-bold text-gray-900 mb-3">Programming & Core CS</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-white border border-gray-200 text-gray-700 rounded-lg text-sm font-medium">Java</span>
+                                <span class="px-3 py-1 bg-white border border-gray-200 text-gray-700 rounded-lg text-sm font-medium">PHP</span>
+                                <span class="px-3 py-1 bg-white border border-gray-200 text-gray-700 rounded-lg text-sm font-medium">Data Structures</span>
+                                <span class="px-3 py-1 bg-white border border-gray-200 text-gray-700 rounded-lg text-sm font-medium">Algorithms</span>
+                                <span class="px-3 py-1 bg-white border border-gray-200 text-gray-700 rounded-lg text-sm font-medium">DBMS</span>
+                            </div>
+                        </div>
+                        <div class="bg-[#fafaf9] p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <h4 class="font-bold text-gray-900 mb-3">Systems & Security</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-lg text-sm font-medium">Kali Linux</span>
+                                <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-lg text-sm font-medium">Network Penetration</span>
+                                <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-lg text-sm font-medium">Evil Twin Attack Testing</span>
+                            </div>
+                        </div>
+                        <div class="bg-[#fafaf9] p-6 rounded-2xl shadow-sm border border-gray-100">
+                            <h4 class="font-bold text-gray-900 mb-3">Hardware & Projects</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-yellow-50 text-yellow-700 rounded-lg text-sm font-medium">Arduino</span>
+                                <span class="px-3 py-1 bg-yellow-50 text-yellow-700 rounded-lg text-sm font-medium">ESP8266</span>
+                                <span class="px-3 py-1 bg-yellow-50 text-yellow-700 rounded-lg text-sm font-medium">Android App Dev</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="works" class="py-24 bg-[#fafaf9] border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-bold mb-4 text-gray-900">Development Projects</h2>
+                    <p class="text-gray-500">Check out my recent GitHub repositories</p>
+                </div>
+            </div>
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <p class="text-gray-400 animate-pulse">Loading projects via AJAX...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-white py-24 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Let's Connect</h2>
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    Have a project in mind, want to collaborate on some hardware, or just want to chat about code or cosmic horror? Drop me a message below!
+                </p>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 text-gray-600 bg-[#fafaf9] p-4 rounded-xl border border-gray-100">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-teal-600 shadow-sm"><i class="fas fa-envelope text-xl"></i></div>
+                        <div>
+                            <p class="text-sm font-bold text-gray-900">Email Me</p>
+                            <a href="mailto:subhodip@domain.com" class="hover:text-teal-600 transition">subhodip@domain.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 text-gray-600 bg-[#fafaf9] p-4 rounded-xl border border-gray-100">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-teal-600 shadow-sm"><i class="fas fa-map-marker-alt text-xl"></i></div>
+                        <div>
+                            <p class="text-sm font-bold text-gray-900">Location</p>
+                            <p>India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-[#fafaf9] p-8 rounded-3xl border border-gray-100 shadow-sm">
+                <form id="google-sheet-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-bold text-gray-900 mb-2">Your Name</label>
+                        <input type="text" id="name" name="Name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white transition">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-bold text-gray-900 mb-2">Your Email</label>
+                        <input type="email" id="email" name="Email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white transition">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-bold text-gray-900 mb-2">Message</label>
+                        <textarea id="message" name="Message" rows="4" required placeholder="How can I help you?" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white transition resize-none"></textarea>
+                    </div>
+                    <button type="submit" id="submit-btn" class="w-full bg-teal-700 text-white font-bold py-4 rounded-xl hover:bg-teal-800 transition duration-300 flex justify-center items-center gap-2 shadow-md">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <div id="form-status" class="hidden text-center text-sm font-bold p-4 rounded-xl mt-4"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-400">© 2026 Subhodip. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // 1. Typed.js Initialization
+            const typed = new Typed('#typed-text', {
+                strings: ['Subhodip.', 'a CS Student.', 'a Developer.', 'a Digital Artist.'],
+                typeSpeed: 60,
+                backSpeed: 40,
+                backDelay: 2000,
+                loop: true
+            });
+
+            // 2. AJAX Portfolio Data Fetch
+            const container = document.getElementById("projects-container");
+
+            function loadProjects() {
+                const mockAPIRequest = new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve([
+                            {
+                                "id": 1,
+                                "title": "Aura Lifts",
+                                "category": "Android Fitness App",
+                                "color": "bg-yellow-100",
+                                "iconClass": "fas fa-dumbbell",
+                                "repo": "https://github.com/Subhodip57/Aura-Lift"
+                            },
+                            {
+                                "id": 2,
+                                "title": "Add To Cart Button",
+                                "category": "UI Component",
+                                "color": "bg-teal-100",
+                                "iconClass": "fas fa-shopping-cart",
+                                "repo": "https://github.com/Subhodip57/Add_To_Cart_button"
+                            },
+                            {
+                                "id": 3,
+                                "title": "ASCII Generator",
+                                "category": "Utility Script",
+                                "color": "bg-red-100",
+                                "iconClass": "fas fa-text-height",
+                                "repo": "https://github.com/Subhodip57/ASCII_Generator"
+                            }
+                        ]);
+                    }, 800);
+                });
+
+                mockAPIRequest
+                    .then(data => {
+                        container.innerHTML = '';
+                        data.forEach(project => {
+                            const card = `
+                                <a href="${project.repo}" target="_blank" rel="noopener noreferrer" class="block rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl hover:-translate-y-1 transition duration-300 bg-white border border-gray-50 group cursor-pointer">
+                                    <div class="h-48 w-full ${project.color} p-4 flex items-center justify-center overflow-hidden">
+                                        <i class="${project.iconClass} text-teal-800 text-6xl group-hover:scale-110 transition duration-500"></i>
+                                    </div>
+                                    <div class="p-6">
+                                        <p class="text-sm font-semibold text-teal-600 mb-1">${project.category}</p>
+                                        <h3 class="text-xl font-bold text-gray-900">${project.title}</h3>
+                                        <p class="text-sm text-gray-500 mt-3 flex items-center gap-1 font-medium group-hover:text-teal-600 transition">
+                                            View Repository <span class="text-lg leading-none">↗</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            `;
+                            container.insertAdjacentHTML('beforeend', card);
+                        });
+                    }).catch(error => { container.innerHTML = `<p class="text-red-500">Failed to load projects</p>`; });
+            }
+            loadProjects();
+
+            // 3. GOOGLE SHEETS FORM HANDLER
+            const form = document.getElementById('google-sheet-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const formStatus = document.getElementById('form-status');
+
+            // !!! IMPORTANT: PASTE YOUR GOOGLE SCRIPT URL HERE !!!
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxaaNbQritq6JD52Mw1YzRiSydCShNz5yZ7XUtpJKtBT0RY4FJYGcYw7melGaobMR9g/exec';
+
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Sending...</span>';
+                
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        formStatus.className = "text-center text-sm font-bold p-4 rounded-xl mt-4 bg-green-100 text-green-700 block";
+                        formStatus.innerHTML = '<i class="fas fa-check-circle mr-2"></i> Message sent successfully!';
+                        form.reset();
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = '<span>Send Message</span> <i class="fas fa-paper-plane"></i>';
+                        setTimeout(() => { formStatus.classList.add('hidden'); }, 5000);
+                    })
+                    .catch(error => {
+                        formStatus.className = "text-center text-sm font-bold p-4 rounded-xl mt-4 bg-red-100 text-red-700 block";
+                        formStatus.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i> Error! Please try again.';
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = '<span>Send Message</span> <i class="fas fa-paper-plane"></i>';
+                        console.error('Error!', error.message);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
