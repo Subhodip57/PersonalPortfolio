@@ -2,7 +2,8 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Portfolio of Subhodip, a Computer Science student specializing in software development, cybersecurity, hardware projects, and creative design.">
     <title>Subhodip's Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -57,12 +58,15 @@
             background-color: #0f766e; transition: all 0.4s ease; transform: translateX(-50%);
         }
         .mobile-link:hover::after { width: 100%; }
+        
+        /* Smooth Navbar Transition */
+        #main-nav { transition: background-color 0.3s ease, box-shadow 0.3s ease; }
     </style>
 </head>
 <body class="bg-gradient-to-br from-[#fafaf9] to-[#e4e4e1] text-gray-800 font-sans antialiased selection:bg-teal-600 selection:text-white overflow-x-hidden">
 
-    <nav class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center sticky top-0 bg-[#fafaf9]/70 backdrop-blur-lg z-[60] border-b border-gray-200/50">
-        <div class="text-2xl font-black tracking-tighter text-gray-900 relative z-[60] hover:text-teal-700 transition duration-300 cursor-pointer">
+    <nav id="main-nav" class="max-w-7xl mx-auto px-6 py-4 md:py-5 flex justify-between items-center sticky top-0 bg-[#fafaf9]/70 backdrop-blur-lg z-[60] border-b border-gray-200/50">
+        <div class="text-xl md:text-2xl font-black tracking-tighter text-gray-900 relative z-[60] hover:text-teal-700 transition duration-300 cursor-pointer">
             Subhodip<span class="text-teal-600">.</span>
         </div>
         
@@ -78,45 +82,45 @@
                 Let's Talk <i class="fas fa-arrow-right text-xs"></i>
             </a>
             
-            <button id="mobile-menu-btn" class="md:hidden relative w-10 h-10 focus:outline-none group flex flex-col justify-center items-center gap-[6px]">
+            <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="md:hidden relative w-12 h-12 -mr-2 focus:outline-none group flex flex-col justify-center items-center gap-[6px]">
                 <span class="menu-line line-1 w-7 h-[2px] bg-gray-900 origin-center group-hover:bg-teal-600"></span>
                 <span class="menu-line line-2 w-7 h-[2px] bg-gray-900 origin-center group-hover:bg-teal-600"></span>
                 <span class="menu-line line-3 w-7 h-[2px] bg-gray-900 origin-center group-hover:bg-teal-600"></span>
             </button>
         </div>
 
-        <div id="mobile-menu" class="fixed inset-0 bg-[#e4e4e1]/70 backdrop-blur-xl z-[50] flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-500 md:hidden">
-            <div id="mobile-menu-links" class="flex flex-col items-center justify-center space-y-10 transform translate-y-10 transition-transform duration-700 w-full px-6">
-                <a href="#about" class="mobile-link text-3xl font-black tracking-[0.2em] text-gray-900 hover:text-teal-700 transition-colors uppercase">ABOUT</a>
-                <a href="#creative" class="mobile-link text-3xl font-black tracking-[0.2em] text-gray-900 hover:text-teal-700 transition-colors uppercase">CREATIVE</a>
-                <a href="#works" class="mobile-link text-3xl font-black tracking-[0.2em] text-gray-900 hover:text-teal-700 transition-colors uppercase">WORKS</a>
-                <a href="#contact" class="mobile-link text-3xl font-black tracking-[0.2em] text-gray-900 hover:text-teal-700 transition-colors uppercase">CONTACT</a>
-                <a href="#contact" class="mobile-link mt-8 px-10 py-4 bg-gray-900 text-white rounded-full font-bold tracking-widest text-sm hover:bg-teal-700 transition-all shadow-xl uppercase">Let's Talk</a>
+        <div id="mobile-menu" class="fixed inset-0 bg-[#e4e4e1]/95 backdrop-blur-xl z-[50] flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-500 md:hidden">
+            <div id="mobile-menu-links" class="flex flex-col items-center justify-center space-y-8 transform translate-y-10 transition-transform duration-700 w-full px-6">
+                <a href="#about" class="mobile-link py-3 text-2xl font-black tracking-[0.2em] text-gray-900 hover:text-teal-700 transition-colors uppercase">ABOUT</a>
+                <a href="#creative" class="mobile-link py-3 text-2xl font-black tracking-[0.2em] text-gray-900 hover:text-teal-700 transition-colors uppercase">CREATIVE</a>
+                <a href="#works" class="mobile-link py-3 text-2xl font-black tracking-[0.2em] text-gray-900 hover:text-teal-700 transition-colors uppercase">WORKS</a>
+                <a href="#contact" class="mobile-link py-3 text-2xl font-black tracking-[0.2em] text-gray-900 hover:text-teal-700 transition-colors uppercase">CONTACT</a>
+                <a href="#contact" class="mobile-link mt-8 px-12 py-4 bg-gray-900 text-white rounded-full font-bold tracking-widest text-sm hover:bg-teal-700 transition-all shadow-xl uppercase">Let's Talk</a>
             </div>
         </div>
     </nav>
 
-    <header class="relative max-w-7xl mx-auto px-6 py-16 md:py-32 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <header class="relative max-w-7xl mx-auto px-6 py-12 md:py-32 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
         <div class="absolute inset-0 bg-grid-pattern opacity-30 -z-20"></div>
-        <div class="absolute top-0 right-0 w-96 h-96 bg-teal-100 rounded-full blur-[100px] opacity-40 -z-10"></div>
+        <div class="absolute top-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-teal-100 rounded-full blur-[80px] md:blur-[100px] opacity-40 -z-10"></div>
 
-        <div class="text-center md:text-left relative z-10">
-            <p class="text-teal-700 font-bold mb-4 tracking-widest text-sm uppercase flex items-center justify-center md:justify-start gap-2">
+        <div class="text-center md:text-left relative z-10 pt-4 md:pt-0">
+            <p class="text-teal-700 font-bold mb-4 tracking-widest text-xs md:text-sm uppercase flex items-center justify-center md:justify-start gap-2">
                 <span class="w-8 h-0.5 bg-teal-700"></span> Welcome to my universe
             </p>
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-gray-900 leading-[1.1] mb-6 tracking-tighter">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-gray-900 leading-[1.1] mb-6 tracking-tighter">
                 Hey There,<br>I'm <span id="typed-text" class="text-gradient"></span>
             </h1>
-            <p class="text-gray-500 text-lg md:text-xl max-w-lg mx-auto md:mx-0 mb-10 leading-relaxed">
+            <p class="text-gray-500 text-base md:text-xl max-w-lg mx-auto md:mx-0 mb-8 md:mb-10 leading-relaxed px-2 md:px-0">
                 I build robust digital systems, experiment with hardware, and craft visual experiences.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                <a href="#qualification" class="px-8 py-4 bg-gray-900 text-white font-semibold rounded-full hover:bg-teal-700 transition-all shadow-xl hover:shadow-teal-900/20 hover:-translate-y-1 text-center">View Resume</a>
-                <a href="#works" class="px-8 py-4 bg-white text-gray-900 border border-gray-200 font-semibold rounded-full hover:border-teal-600 hover:bg-teal-50 transition-all hover:-translate-y-1 text-center">My Works</a>
+            <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-3 md:gap-4">
+                <a href="#qualification" class="px-8 py-3.5 md:py-4 bg-gray-900 text-white font-semibold rounded-full hover:bg-teal-700 transition-all shadow-xl hover:shadow-teal-900/20 hover:-translate-y-1 text-center w-full sm:w-auto">View Resume</a>
+                <a href="#works" class="px-8 py-3.5 md:py-4 bg-white text-gray-900 border border-gray-200 font-semibold rounded-full hover:border-teal-600 hover:bg-teal-50 transition-all hover:-translate-y-1 text-center w-full sm:w-auto">My Works</a>
             </div>
         </div>
         
-        <div class="relative flex justify-center items-end pt-8 md:pt-0 animate-float">
+        <div class="relative flex justify-center items-end animate-float mt-8 md:mt-0">
             <div class="absolute inset-0 -z-10 flex items-center justify-center">
                 <div class="w-full h-full max-w-[500px] opacity-20" style="mask-image: radial-gradient(circle at center, black 40%, transparent 70%); -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 70%);">
                     <svg class="w-full h-full text-teal-800" xmlns="http://www.w3.org/2000/svg">
@@ -131,22 +135,22 @@
                 </div>
             </div>
             
-            <img src="landing.png" alt="Subhodip" class="relative z-10 w-full max-w-[34rem] md:max-w-3xl drop-shadow-[0_25px_35px_rgba(15,118,110,0.2)] object-contain transition-transform duration-500 hover:scale-[1.02]">
+            <img src="landing.png" alt="Subhodip Portrait" class="relative z-10 w-full max-w-[20rem] sm:max-w-[24rem] md:max-w-3xl drop-shadow-[0_25px_35px_rgba(15,118,110,0.2)] object-contain transition-transform duration-500 hover:scale-[1.02]">
             
-            <div class="glass-card absolute right-4 md:-right-4 bottom-8 md:bottom-16 p-4 md:p-5 rounded-2xl shadow-xl z-20 text-center flex flex-col items-center transform transition duration-500 hover:-translate-y-2 hover:shadow-teal-900/10">
-                <div class="w-10 h-10 md:w-12 md:h-12 bg-teal-50 rounded-full flex items-center justify-center text-xl md:text-2xl mb-2 text-teal-700 shadow-inner">
-                    <i class="fas fa-laptop-code text-base md:text-lg"></i>
+            <div class="glass-card absolute right-0 sm:right-4 md:-right-4 bottom-4 md:bottom-16 p-3 md:p-5 rounded-xl md:rounded-2xl shadow-xl z-20 text-center flex flex-col items-center transform transition duration-500 hover:-translate-y-2 hover:shadow-teal-900/10">
+                <div class="w-8 h-8 md:w-12 md:h-12 bg-teal-50 rounded-full flex items-center justify-center text-sm md:text-2xl mb-1 md:mb-2 text-teal-700 shadow-inner">
+                    <i class="fas fa-laptop-code"></i>
                 </div>
-                <p class="text-[10px] md:text-xs font-extrabold w-20 md:w-24 tracking-widest text-gray-900 uppercase">CS Student</p>
+                <p class="text-[9px] md:text-xs font-extrabold w-16 md:w-24 tracking-widest text-gray-900 uppercase">CS Student</p>
             </div>
         </div>
     </header>
 
-    <section id="about" class="py-20 md:py-32 relative">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section id="about" class="py-16 md:py-32 relative">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
             <div>
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-8 text-gray-900 tracking-tight">Behind the <span class="text-teal-700">Code.</span></h2>
-                <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-6 md:mb-8 text-gray-900 tracking-tight text-center md:text-left">Behind the <span class="text-teal-700">Code.</span></h2>
+                <div class="space-y-4 md:space-y-6 text-gray-600 text-base md:text-lg leading-relaxed text-center md:text-left">
                     <p>
                         I'm a 19-year-old Computer Science undergraduate currently in my 4th semester at Memari College. While my coursework is heavily rooted in core operating systems, Java, and DBMS, my curiosity extends far beyond the standard curriculum into the mechanics of security and systems. 
                     </p>
@@ -159,88 +163,134 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-100 hover:shadow-xl hover:shadow-teal-900/5 hover:-translate-y-2 hover:border-teal-100 transition-all duration-300 group">
-                    <div class="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl mb-5 shadow-sm group-hover:scale-110 transition-transform">🏋️‍♂️</div>
-                    <h4 class="font-bold text-gray-900 text-xl">Fitness</h4>
-                    <p class="text-sm text-gray-500 mt-2">Dedicated to strength training and tracking progress.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+                <div class="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 group text-center sm:text-left flex flex-col items-center sm:items-start">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mb-4 shadow-sm group-hover:scale-110 transition-transform">🏋️‍♂️</div>
+                    <h4 class="font-bold text-gray-900 text-lg md:text-xl">Fitness</h4>
+                    <p class="text-xs md:text-sm text-gray-500 mt-2">Dedicated to strength training and tracking progress.</p>
                 </div>
-                <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-100 hover:shadow-xl hover:shadow-teal-900/5 hover:-translate-y-2 hover:border-teal-100 transition-all duration-300 group">
-                    <div class="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl mb-5 shadow-sm group-hover:scale-110 transition-transform">🎬</div>
-                    <h4 class="font-bold text-gray-900 text-xl">Video Editing</h4>
-                    <p class="text-sm text-gray-500 mt-2">Crafting visual stories with Premiere Pro & After Effects.</p>
+                <div class="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 group text-center sm:text-left flex flex-col items-center sm:items-start">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mb-4 shadow-sm group-hover:scale-110 transition-transform">🎬</div>
+                    <h4 class="font-bold text-gray-900 text-lg md:text-xl">Video Editing</h4>
+                    <p class="text-xs md:text-sm text-gray-500 mt-2">Crafting visual stories with Premiere Pro & After Effects.</p>
                 </div>
-                <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-100 hover:shadow-xl hover:shadow-teal-900/5 hover:-translate-y-2 hover:border-teal-100 transition-all duration-300 group">
-                    <div class="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl mb-5 shadow-sm group-hover:scale-110 transition-transform">🪐</div>
-                    <h4 class="font-bold text-gray-900 text-xl">Astrophysics</h4>
-                    <p class="text-sm text-gray-500 mt-2">Fascinated by quantum mechanics and the cosmos.</p>
+                <div class="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 group text-center sm:text-left flex flex-col items-center sm:items-start">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mb-4 shadow-sm group-hover:scale-110 transition-transform">🪐</div>
+                    <h4 class="font-bold text-gray-900 text-lg md:text-xl">Astrophysics</h4>
+                    <p class="text-xs md:text-sm text-gray-500 mt-2">Fascinated by quantum mechanics and the cosmos.</p>
                 </div>
-                <div class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-100 hover:shadow-xl hover:shadow-teal-900/5 hover:-translate-y-2 hover:border-teal-100 transition-all duration-300 group">
-                    <div class="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl mb-5 shadow-sm group-hover:scale-110 transition-transform">🦑</div>
-                    <h4 class="font-bold text-gray-900 text-xl">Mythos & Lore</h4>
-                    <p class="text-sm text-gray-500 mt-2">Exploring ancient folklore and Lovecraftian fiction.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="creative" class="py-20 md:py-32">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-14 text-center md:text-left">
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 tracking-tight">Creative <span class="text-teal-700">Canvas.</span></h2>
-                <p class="text-gray-500 text-lg">A glimpse into my digital composition and Photoshop work.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                <div class="rounded-[2rem] overflow-hidden shadow-lg group bg-white border border-gray-100 relative cursor-pointer">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 z-10"></div>
-                    <div class="relative h-80 md:h-[600px] w-full overflow-hidden bg-gray-900">
-                        <img src="Instagram1 2026.png" alt="Surreal Moon and Jeep Composite" class="object-cover h-full w-full transform group-hover:scale-110 transition duration-1000 opacity-90 group-hover:opacity-100">
-                    </div>
-                    <div class="absolute bottom-0 left-0 p-8 z-20 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                        <p class="text-xs font-bold tracking-widest text-teal-400 mb-2 uppercase">Photoshop Composite</p>
-                        <h3 class="text-3xl font-bold text-white">Surreal Landscapes</h3>
-                    </div>
-                </div>
-                <div class="rounded-[2rem] overflow-hidden shadow-lg group bg-white border border-gray-100 relative cursor-pointer">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 z-10"></div>
-                    <div class="relative h-80 md:h-[600px] w-full overflow-hidden bg-gray-900">
-                        <img src="Instagram1 2026-6.png" alt="Gritty Portrait Edit" class="object-cover h-full w-full transform group-hover:scale-110 transition duration-1000 opacity-90 group-hover:opacity-100">
-                    </div>
-                    <div class="absolute bottom-0 left-0 p-8 z-20 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                        <p class="text-xs font-bold tracking-widest text-teal-400 mb-2 uppercase">Portrait Retouching</p>
-                        <h3 class="text-3xl font-bold text-white">Urban Grayscale</h3>
-                    </div>
+                <div class="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 group text-center sm:text-left flex flex-col items-center sm:items-start">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mb-4 shadow-sm group-hover:scale-110 transition-transform">🦑</div>
+                    <h4 class="font-bold text-gray-900 text-lg md:text-xl">Mythos & Lore</h4>
+                    <p class="text-xs md:text-sm text-gray-500 mt-2">Exploring ancient folklore and Lovecraftian fiction.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="qualification" class="py-20 md:py-32 bg-white/60 backdrop-blur-md border-y border-white/40 shadow-sm">
+    <section id="creative" class="py-16 md:py-32">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-16 text-center text-gray-900 tracking-tight">My Qualifications.</h2>
+            <div class="mb-10 md:mb-14 text-center md:text-left">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-3 md:mb-4 text-gray-900 tracking-tight">Creative <span class="text-teal-700">Canvas.</span></h2>
+                <p class="text-gray-500 text-base md:text-lg">A glimpse into my visual design, compositing, and video editing work.</p>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="rounded-3xl md:rounded-[2rem] overflow-hidden shadow-lg group bg-white border border-gray-100 relative cursor-pointer h-72 md:h-[500px]">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-60 md:opacity-0 group-hover:opacity-80 transition-opacity duration-500 z-10"></div>
+                    <div class="relative h-full w-full overflow-hidden bg-gray-900">
+                        <img src="Instagram1 2026.png" alt="Surreal Moon and Jeep Composite" loading="lazy" class="object-cover h-full w-full transform group-hover:scale-110 transition duration-1000 opacity-90 group-hover:opacity-100">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6 md:p-8 z-20 transform translate-y-0 md:translate-y-4 opacity-100 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                        <p class="text-[10px] md:text-xs font-bold tracking-widest text-teal-300 md:text-teal-400 mb-1 md:mb-2 uppercase">Photoshop Composite</p>
+                        <h3 class="text-xl md:text-3xl font-bold text-white">Surreal Landscapes</h3>
+                    </div>
+                </div>
+                
+                <div class="rounded-3xl md:rounded-[2rem] overflow-hidden shadow-lg group bg-white border border-gray-100 relative cursor-pointer h-72 md:h-[500px]">
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-60 md:opacity-0 group-hover:opacity-80 transition-opacity duration-500 z-10"></div>
+                    <div class="relative h-full w-full overflow-hidden bg-gray-900">
+                        <img src="Instagram1 2026-6.png" alt="Gritty Portrait Edit" loading="lazy" class="object-cover h-full w-full transform group-hover:scale-110 transition duration-1000 opacity-90 group-hover:opacity-100">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6 md:p-8 z-20 transform translate-y-0 md:translate-y-4 opacity-100 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                        <p class="text-[10px] md:text-xs font-bold tracking-widest text-teal-300 md:text-teal-400 mb-1 md:mb-2 uppercase">Portrait Retouching</p>
+                        <h3 class="text-xl md:text-3xl font-bold text-white">Urban Grayscale</h3>
+                    </div>
+                </div>
+
+                <div class="rounded-3xl md:rounded-[2rem] overflow-hidden shadow-lg group bg-gray-900 border border-gray-800 relative flex flex-col justify-center items-center text-center p-6 md:p-8 h-72 md:h-[500px] hover:border-teal-500 transition-all duration-300">
+                    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-teal-900/40 via-gray-900 to-gray-900 opacity-50 z-0"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 md:w-20 md:h-20 bg-gray-800 rounded-full flex items-center justify-center text-2xl md:text-4xl text-teal-500 mx-auto mb-4 md:mb-6 shadow-xl group-hover:scale-110 group-hover:bg-teal-500 group-hover:text-white transition-all duration-500">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <p class="text-[10px] md:text-xs font-bold tracking-widest text-teal-400 mb-2 md:mb-3 uppercase">Premiere Pro & AE</p>
+                        <h3 class="text-xl md:text-3xl font-bold text-white mb-2 md:mb-4">Video Editing Reel</h3>
+                        <p class="text-gray-400 text-xs md:text-sm">Dynamic cuts, color grading, and motion graphics.</p>
+                        <button class="mt-4 md:mt-6 px-5 md:px-6 py-2 border border-teal-500 text-teal-400 rounded-full hover:bg-teal-500 hover:text-white transition-colors text-xs md:text-sm font-bold tracking-wider">COMING SOON</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 bg-white/40">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+                <div class="bg-white p-6 md:p-8 rounded-3xl md:rounded-[2rem] shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4 md:mb-6">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-yellow-50 text-yellow-600 rounded-xl flex items-center justify-center text-lg md:text-xl shrink-0"><i class="fas fa-microchip"></i></div>
+                        <div>
+                            <h3 class="text-lg md:text-xl font-bold text-gray-900">Hardware Automation</h3>
+                            <p class="text-xs md:text-sm font-semibold text-gray-500">ESP8266 & Arduino</p>
+                        </div>
+                    </div>
+                    <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+                        Bridging software code with physical hardware. Built projects including a remote PC starter and smart lighting systems utilizing IoT concepts to control devices over local networks.
+                    </p>
+                </div>
+                
+                <div class="bg-gray-900 p-6 md:p-8 rounded-3xl md:rounded-[2rem] shadow-sm border border-gray-800 hover:shadow-xl hover:shadow-teal-900/20 hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex items-center gap-4 mb-4 md:mb-6">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-gray-800 border border-gray-700 text-teal-400 rounded-xl flex items-center justify-center text-lg md:text-xl shrink-0"><i class="fas fa-shield-alt"></i></div>
+                        <div>
+                            <h3 class="text-lg md:text-xl font-bold text-white">Network Security</h3>
+                            <p class="text-xs md:text-sm font-semibold text-teal-500">Kali Linux Environments</p>
+                        </div>
+                    </div>
+                    <p class="text-sm md:text-base text-gray-400 leading-relaxed">
+                        Passionate about ethical hacking and penetration testing. Conducted isolated experiments understanding vulnerabilities like Evil Twin attacks and analyzing network defense mechanisms.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="qualification" class="py-16 md:py-32 bg-white/60 backdrop-blur-md border-y border-white/40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-12 md:mb-16 text-center text-gray-900 tracking-tight">My Qualifications.</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
                 <div>
-                    <h3 class="text-2xl font-bold mb-10 text-gray-900 flex items-center gap-3">
-                        <span class="w-10 h-10 bg-teal-50 text-teal-700 rounded-xl flex items-center justify-center"><i class="fas fa-graduation-cap"></i></span> 
+                    <h3 class="text-xl md:text-2xl font-bold mb-8 md:mb-10 text-gray-900 flex items-center gap-3">
+                        <span class="w-10 h-10 bg-teal-50 text-teal-700 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-graduation-cap"></i></span> 
                         Education
                     </h3>
-                    <div class="border-l-2 border-teal-100/50 pl-8 space-y-12 ml-4">
+                    <div class="border-l-2 border-teal-100/50 pl-6 md:pl-8 space-y-10 md:space-y-12 ml-2 md:ml-4">
                         <div class="relative group">
-                            <div class="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-teal-600 ring-4 ring-white group-hover:scale-125 transition-transform"></div>
-                            <span class="inline-block px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-full tracking-wider mb-3">CURRENT (4th Sem)</span>
-                            <h4 class="text-2xl font-bold text-gray-900">B.Sc. Hons. Computer Science</h4>
-                            <p class="text-teal-700 font-semibold mb-3">Memari College</p>
-                            <p class="text-gray-600 leading-relaxed bg-white/80 p-5 rounded-2xl border border-gray-100 shadow-sm">
+                            <div class="absolute -left-[33px] md:-left-[41px] top-1 h-4 w-4 md:h-5 md:w-5 rounded-full bg-teal-600 ring-4 ring-white group-hover:scale-125 transition-transform"></div>
+                            <span class="inline-block px-3 py-1 bg-teal-50 text-teal-700 text-[10px] md:text-xs font-bold rounded-full tracking-wider mb-2 md:mb-3">CURRENT (4th Sem)</span>
+                            <h4 class="text-xl md:text-2xl font-bold text-gray-900">B.Sc. Hons. Computer Science</h4>
+                            <p class="text-sm md:text-base text-teal-700 font-semibold mb-3">Memari College</p>
+                            <p class="text-sm md:text-base text-gray-600 leading-relaxed bg-white/80 p-4 md:p-5 rounded-2xl border border-gray-100 shadow-sm">
                                 Current coursework focuses on Core Operating Systems, Database Management Systems (DBMS), Java Programming, Mathematics, and Statistics. Successfully completed 3rd-semester modules including advanced Data Structures and Algorithms (DSA), Discrete Mathematics, and PHP.
                             </p>
                         </div>
                         <div class="relative group">
-                            <div class="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-gray-300 ring-4 ring-white group-hover:scale-125 group-hover:bg-teal-400 transition-all"></div>
-                            <h4 class="text-2xl font-bold text-gray-900 mt-1">High School Education</h4>
-                            <p class="text-gray-500 font-semibold mb-3">Ajhapur High School</p>
-                            <p class="text-gray-600 leading-relaxed bg-white/80 p-5 rounded-2xl border border-gray-100 shadow-sm">
+                            <div class="absolute -left-[33px] md:-left-[41px] top-1 h-4 w-4 md:h-5 md:w-5 rounded-full bg-gray-300 ring-4 ring-white group-hover:scale-125 group-hover:bg-teal-400 transition-all"></div>
+                            <h4 class="text-xl md:text-2xl font-bold text-gray-900 mt-1">High School Education</h4>
+                            <p class="text-sm md:text-base text-gray-500 font-semibold mb-3">Ajhapur High School</p>
+                            <p class="text-sm md:text-base text-gray-600 leading-relaxed bg-white/80 p-4 md:p-5 rounded-2xl border border-gray-100 shadow-sm">
                                 Completed foundational secondary and higher secondary education, building strong analytical and mathematical skills.
                             </p>
                         </div>
@@ -248,50 +298,49 @@
                 </div>
 
                 <div>
-                    <h3 class="text-2xl font-bold mb-10 text-gray-900 flex items-center gap-3">
-                        <span class="w-10 h-10 bg-teal-50 text-teal-700 rounded-xl flex items-center justify-center"><i class="fas fa-rocket"></i></span> 
+                    <h3 class="text-xl md:text-2xl font-bold mb-8 md:mb-10 text-gray-900 flex items-center gap-3">
+                        <span class="w-10 h-10 bg-teal-50 text-teal-700 rounded-xl flex items-center justify-center shrink-0"><i class="fas fa-rocket"></i></span> 
                         Technical Expertise
                     </h3>
                     
-                    <div class="space-y-6">
-                        
-                        <div class="bg-white/80 hover:bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 group">
-                            <h4 class="font-bold text-gray-900 mb-4 text-lg">Programming Languages</h4>
+                    <div class="space-y-4 md:space-y-6">
+                        <div class="bg-white/80 hover:bg-white p-5 md:p-6 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 group">
+                            <h4 class="font-bold text-gray-900 mb-3 md:mb-4 text-base md:text-lg">Programming Languages</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-4 py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-xl text-sm font-semibold transition-colors">Java</span>
-                                <span class="px-4 py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-xl text-sm font-semibold transition-colors">Python</span>
-                                <span class="px-4 py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-xl text-sm font-semibold transition-colors">C++</span>
-                                <span class="px-4 py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-xl text-sm font-semibold transition-colors">C</span>
-                                <span class="px-4 py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-xl text-sm font-semibold transition-colors">PHP</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold transition-colors">Java</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold transition-colors">Python</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold transition-colors">C++</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold transition-colors">C</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold transition-colors">PHP</span>
                             </div>
                         </div>
 
-                        <div class="bg-white/80 hover:bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 group">
-                            <h4 class="font-bold text-gray-900 mb-4 text-lg">Core CS & Databases</h4>
+                        <div class="bg-white/80 hover:bg-white p-5 md:p-6 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 group">
+                            <h4 class="font-bold text-gray-900 mb-3 md:mb-4 text-base md:text-lg">Core CS & Databases</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-4 py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-xl text-sm font-semibold transition-colors">Data Structures</span>
-                                <span class="px-4 py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-xl text-sm font-semibold transition-colors">Algorithms</span>
-                                <span class="px-4 py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-xl text-sm font-semibold transition-colors">Operating Systems</span>
-                                <span class="px-4 py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-xl text-sm font-semibold transition-colors">DBMS</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold transition-colors">Data Structures</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold transition-colors">Algorithms</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold transition-colors">Operating Systems</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-gray-50 group-hover:bg-teal-50 border border-gray-200 group-hover:border-teal-200 text-gray-700 group-hover:text-teal-800 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold transition-colors">DBMS</span>
                             </div>
                         </div>
 
-                        <div class="bg-white/80 hover:bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 group">
-                            <h4 class="font-bold text-gray-900 mb-4 text-lg">Systems & Security</h4>
+                        <div class="bg-white/80 hover:bg-white p-5 md:p-6 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 group">
+                            <h4 class="font-bold text-gray-900 mb-3 md:mb-4 text-base md:text-lg">Systems & Security</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-4 py-2 bg-teal-50 border border-teal-100 text-teal-700 rounded-xl text-sm font-semibold hover:bg-teal-600 hover:text-white transition-colors cursor-default">Linux Ecosystem</span>
-                                <span class="px-4 py-2 bg-teal-50 border border-teal-100 text-teal-700 rounded-xl text-sm font-semibold hover:bg-teal-600 hover:text-white transition-colors cursor-default">Kali Linux</span>
-                                <span class="px-4 py-2 bg-teal-50 border border-teal-100 text-teal-700 rounded-xl text-sm font-semibold hover:bg-teal-600 hover:text-white transition-colors cursor-default">Network Penetration</span>
-                                <span class="px-4 py-2 bg-teal-50 border border-teal-100 text-teal-700 rounded-xl text-sm font-semibold hover:bg-teal-600 hover:text-white transition-colors cursor-default">Evil Twin Attacks</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-teal-50 border border-teal-100 text-teal-700 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold hover:bg-teal-600 hover:text-white transition-colors cursor-default">Linux Ecosystem</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-teal-50 border border-teal-100 text-teal-700 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold hover:bg-teal-600 hover:text-white transition-colors cursor-default">Kali Linux</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-teal-50 border border-teal-100 text-teal-700 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold hover:bg-teal-600 hover:text-white transition-colors cursor-default">Network Penetration</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-teal-50 border border-teal-100 text-teal-700 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold hover:bg-teal-600 hover:text-white transition-colors cursor-default">Evil Twin Attacks</span>
                             </div>
                         </div>
 
-                        <div class="bg-white/80 hover:bg-white p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 group">
-                            <h4 class="font-bold text-gray-900 mb-4 text-lg">Hardware & Projects</h4>
+                        <div class="bg-white/80 hover:bg-white p-5 md:p-6 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 group">
+                            <h4 class="font-bold text-gray-900 mb-3 md:mb-4 text-base md:text-lg">Hardware & Projects</h4>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-4 py-2 bg-yellow-50 border border-yellow-100 text-yellow-800 rounded-xl text-sm font-semibold hover:bg-yellow-500 hover:text-white transition-colors cursor-default">Arduino</span>
-                                <span class="px-4 py-2 bg-yellow-50 border border-yellow-100 text-yellow-800 rounded-xl text-sm font-semibold hover:bg-yellow-500 hover:text-white transition-colors cursor-default">ESP8266</span>
-                                <span class="px-4 py-2 bg-yellow-50 border border-yellow-100 text-yellow-800 rounded-xl text-sm font-semibold hover:bg-yellow-500 hover:text-white transition-colors cursor-default">Android App Dev</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-yellow-50 border border-yellow-100 text-yellow-800 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold hover:bg-yellow-500 hover:text-white transition-colors cursor-default">Arduino</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-yellow-50 border border-yellow-100 text-yellow-800 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold hover:bg-yellow-500 hover:text-white transition-colors cursor-default">ESP8266</span>
+                                <span class="px-3 py-1.5 md:px-4 md:py-2 bg-yellow-50 border border-yellow-100 text-yellow-800 rounded-lg md:rounded-xl text-xs md:text-sm font-semibold hover:bg-yellow-500 hover:text-white transition-colors cursor-default">Android App Dev</span>
                             </div>
                         </div>
 
@@ -301,111 +350,123 @@
         </div>
     </section>
 
-    <section id="works" class="py-20 md:py-32">
+    <section id="works" class="py-16 md:py-32">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-14 text-center md:text-left">
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 tracking-tight">Development <span class="text-teal-700">Projects.</span></h2>
-                <p class="text-gray-500 text-lg">Check out my recent GitHub repositories</p>
+            <div class="mb-10 md:mb-14 text-center md:text-left">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-3 md:mb-4 text-gray-900 tracking-tight">Development <span class="text-teal-700">Projects.</span></h2>
+                <p class="text-gray-500 text-base md:text-lg">Check out my recent GitHub repositories</p>
             </div>
-            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="col-span-3 flex justify-center py-12">
+            <div id="projects-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div class="col-span-1 sm:col-span-2 lg:col-span-4 flex justify-center py-12">
                     <div class="animate-pulse flex flex-col items-center">
-                        <div class="w-12 h-12 border-4 border-teal-200 border-t-teal-700 rounded-full animate-spin mb-4"></div>
-                        <p class="text-gray-400 font-medium">Fetching repositories...</p>
+                        <div class="w-10 h-10 md:w-12 md:h-12 border-4 border-teal-200 border-t-teal-700 rounded-full animate-spin mb-4"></div>
+                        <p class="text-gray-400 font-medium text-sm md:text-base">Fetching repositories...</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="bg-gray-900 py-20 md:py-32 relative overflow-hidden">
+    <section id="contact" class="bg-gray-900 py-16 md:py-32 relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-            <div class="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-teal-900/30 blur-[120px]"></div>
-            <div class="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-teal-800/20 blur-[120px]"></div>
+            <div class="absolute -top-[20%] -right-[10%] w-[80%] md:w-[50%] h-[50%] rounded-full bg-teal-900/30 blur-[80px] md:blur-[120px]"></div>
+            <div class="absolute -bottom-[20%] -left-[10%] w-[80%] md:w-[50%] h-[50%] rounded-full bg-teal-800/20 blur-[80px] md:blur-[120px]"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
-            <div class="text-white">
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">Let's <span class="text-teal-400">Connect.</span></h2>
-                <p class="text-gray-400 mb-10 text-lg leading-relaxed max-w-md">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 relative z-10">
+            <div class="text-white text-center md:text-left">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 md:mb-6 tracking-tight">Let's <span class="text-teal-400">Connect.</span></h2>
+                <p class="text-gray-400 mb-8 md:mb-10 text-base md:text-lg leading-relaxed max-w-md mx-auto md:mx-0">
                     Have a project in mind, want to collaborate on some hardware, or just want to chat about code or cosmic horror? Drop me a message below!
                 </p>
                 
-                <div class="space-y-5 mb-12">
-                    <a href="mailto:lahasubhodip889@gmail.com" class="flex items-center gap-5 p-4 rounded-2xl bg-gray-800/50 border border-gray-700 hover:bg-gray-800 hover:border-teal-500 transition-all duration-300 group cursor-pointer hover:-translate-y-1 hover:shadow-lg hover:shadow-teal-900/20">
-                        <div class="w-14 h-14 bg-gray-800 border border-gray-600 rounded-xl flex items-center justify-center text-teal-400 group-hover:bg-teal-500 group-hover:text-white transition-all duration-300">
-                            <i class="fas fa-envelope text-xl group-hover:scale-110 transition-transform"></i>
+                <div class="space-y-4 md:space-y-5 mb-10 md:mb-12">
+                    <a href="mailto:lahasubhodip889@gmail.com" class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-5 p-5 md:p-4 rounded-2xl md:rounded-2xl bg-gray-800/50 border border-gray-700 hover:bg-gray-800 hover:border-teal-500 transition-all duration-300 group cursor-pointer hover:-translate-y-1 hover:shadow-lg hover:shadow-teal-900/20">
+                        <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-800 border border-gray-600 rounded-full sm:rounded-xl flex items-center justify-center text-teal-400 group-hover:bg-teal-500 group-hover:text-white transition-all duration-300 shrink-0">
+                            <i class="fas fa-envelope text-lg md:text-xl group-hover:scale-110 transition-transform"></i>
                         </div>
-                        <div>
-                            <p class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1 group-hover:text-gray-300 transition-colors">Email Me</p>
-                            <p class="text-lg font-medium text-gray-200 group-hover:text-white transition-colors">lahasubhodip889@gmail.com</p>
+                        <div class="overflow-hidden">
+                            <p class="text-xs md:text-sm font-bold text-gray-400 uppercase tracking-widest mb-1 group-hover:text-gray-300 transition-colors">Email Me</p>
+                            <p class="text-base md:text-lg font-medium text-gray-200 group-hover:text-white transition-colors truncate">lahasubhodip889@gmail.com</p>
                         </div>
                     </a>
                     
-                    <div class="flex items-center gap-5 p-4 rounded-2xl bg-gray-800/50 border border-gray-700">
-                        <div class="w-14 h-14 bg-gray-800 border border-gray-600 rounded-xl flex items-center justify-center text-gray-400">
-                            <i class="fas fa-map-marker-alt text-xl"></i>
+                    <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-5 p-5 md:p-4 rounded-2xl md:rounded-2xl bg-gray-800/50 border border-gray-700">
+                        <div class="w-12 h-12 md:w-14 md:h-14 bg-gray-800 border border-gray-600 rounded-full sm:rounded-xl flex items-center justify-center text-gray-400 shrink-0">
+                            <i class="fas fa-map-marker-alt text-lg md:text-xl"></i>
                         </div>
                         <div>
-                            <p class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Location</p>
-                            <p class="text-lg font-medium text-gray-200">India</p>
+                            <p class="text-xs md:text-sm font-bold text-gray-400 uppercase tracking-widest mb-1">Location</p>
+                            <p class="text-base md:text-lg font-medium text-gray-200">India</p>
                         </div>
                     </div>
                 </div>
 
-                <div>
-                    <p class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Find me online</p>
+                <div class="flex flex-col items-center md:items-start">
+                    <p class="text-xs md:text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Find me online</p>
                     <div class="flex gap-4">
-                        <a href="https://www.facebook.com/share/1EV3HrYJq9/" target="_blank" rel="noopener noreferrer" class="hover-facebook w-14 h-14 bg-gray-800/80 border border-gray-700 rounded-2xl flex items-center justify-center text-gray-400 transition-all duration-300 transform hover:-translate-y-2 group">
-                            <i class="fab fa-facebook-f text-2xl group-hover:scale-110 transition-transform"></i>
+                        <a href="https://www.facebook.com/share/1EV3HrYJq9/" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="hover-facebook w-12 h-12 md:w-14 md:h-14 bg-gray-800/80 border border-gray-700 rounded-full md:rounded-2xl flex items-center justify-center text-gray-400 transition-all duration-300 transform hover:-translate-y-2 group">
+                            <i class="fab fa-facebook-f text-xl md:text-2xl group-hover:scale-110 transition-transform"></i>
                         </a>
-                        <a href="https://www.instagram.com/laha.subhodip?igsh=MTNyYnNpMGRramltcg==" target="_blank" rel="noopener noreferrer" class="hover-instagram w-14 h-14 bg-gray-800/80 border border-gray-700 rounded-2xl flex items-center justify-center text-gray-400 transition-all duration-300 transform hover:-translate-y-2 group">
-                            <i class="fab fa-instagram text-2xl group-hover:scale-110 transition-transform"></i>
+                        <a href="https://www.instagram.com/laha.subhodip?igsh=MTNyYnNpMGRramltcg==" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="hover-instagram w-12 h-12 md:w-14 md:h-14 bg-gray-800/80 border border-gray-700 rounded-full md:rounded-2xl flex items-center justify-center text-gray-400 transition-all duration-300 transform hover:-translate-y-2 group">
+                            <i class="fab fa-instagram text-xl md:text-2xl group-hover:scale-110 transition-transform"></i>
                         </a>
-                        <a href="https://github.com/Subhodip57" target="_blank" rel="noopener noreferrer" class="hover-github w-14 h-14 bg-gray-800/80 border border-gray-700 rounded-2xl flex items-center justify-center text-gray-400 transition-all duration-300 transform hover:-translate-y-2 group">
-                            <i class="fab fa-github text-2xl group-hover:scale-110 transition-transform"></i>
+                        <a href="https://github.com/Subhodip57" aria-label="GitHub" target="_blank" rel="noopener noreferrer" class="hover-github w-12 h-12 md:w-14 md:h-14 bg-gray-800/80 border border-gray-700 rounded-full md:rounded-2xl flex items-center justify-center text-gray-400 transition-all duration-300 transform hover:-translate-y-2 group">
+                            <i class="fab fa-github text-xl md:text-2xl group-hover:scale-110 transition-transform"></i>
                         </a>
                     </div>
                 </div>
 
             </div>
             
-            <div class="bg-white p-8 md:p-10 rounded-[2rem] shadow-2xl">
-                <form id="google-sheet-form" class="space-y-6">
+            <div class="bg-white p-6 md:p-10 rounded-3xl md:rounded-[2rem] shadow-2xl">
+                <form id="google-sheet-form" class="space-y-5 md:space-y-6">
                     <div>
-                        <label for="name" class="block text-sm font-extrabold text-gray-900 mb-2 uppercase tracking-wide">Your Name</label>
-                        <input type="text" id="name" name="Name" required placeholder="John Doe" class="w-full px-5 py-4 rounded-xl border-2 border-gray-100 focus:outline-none focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 bg-gray-50 text-gray-900 font-medium transition-all">
+                        <label for="name" class="block text-xs md:text-sm font-extrabold text-gray-900 mb-2 uppercase tracking-wide">Your Name</label>
+                        <input type="text" id="name" name="Name" required placeholder="John Doe" class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl border-2 border-gray-100 focus:outline-none focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 bg-gray-50 text-gray-900 font-medium transition-all text-base md:text-sm">
                     </div>
                     <div>
-                        <label for="email" class="block text-sm font-extrabold text-gray-900 mb-2 uppercase tracking-wide">Your Email</label>
-                        <input type="email" id="email" name="Email" required placeholder="john@example.com" class="w-full px-5 py-4 rounded-xl border-2 border-gray-100 focus:outline-none focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 bg-gray-50 text-gray-900 font-medium transition-all">
+                        <label for="email" class="block text-xs md:text-sm font-extrabold text-gray-900 mb-2 uppercase tracking-wide">Your Email</label>
+                        <input type="email" id="email" name="Email" required placeholder="john@example.com" class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl border-2 border-gray-100 focus:outline-none focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 bg-gray-50 text-gray-900 font-medium transition-all text-base md:text-sm">
                     </div>
                     <div>
-                        <label for="message" class="block text-sm font-extrabold text-gray-900 mb-2 uppercase tracking-wide">Message</label>
-                        <textarea id="message" name="Message" rows="4" required placeholder="How can I help you?" class="w-full px-5 py-4 rounded-xl border-2 border-gray-100 focus:outline-none focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 bg-gray-50 text-gray-900 font-medium transition-all resize-none"></textarea>
+                        <label for="message" class="block text-xs md:text-sm font-extrabold text-gray-900 mb-2 uppercase tracking-wide">Message</label>
+                        <textarea id="message" name="Message" rows="4" required placeholder="How can I help you?" class="w-full px-4 md:px-5 py-3 md:py-4 rounded-xl border-2 border-gray-100 focus:outline-none focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 bg-gray-50 text-gray-900 font-medium transition-all resize-none text-base md:text-sm"></textarea>
                     </div>
-                    <button type="submit" id="submit-btn" class="w-full bg-gray-900 text-white font-bold py-4 rounded-xl hover:bg-teal-700 transition duration-300 flex justify-center items-center gap-2 shadow-lg hover:shadow-teal-900/30 hover:-translate-y-1">
+                    <button type="submit" id="submit-btn" class="w-full bg-gray-900 text-white font-bold py-3.5 md:py-4 rounded-xl hover:bg-teal-700 transition duration-300 flex justify-center items-center gap-2 shadow-lg hover:shadow-teal-900/30 hover:-translate-y-1 text-sm md:text-base">
                         <span>Send Message</span>
                         <i class="fas fa-paper-plane"></i>
                     </button>
-                    <div id="form-status" class="hidden text-center text-sm font-bold p-4 rounded-xl mt-4"></div>
+                    <div id="form-status" class="hidden text-center text-sm font-bold p-3 md:p-4 rounded-xl mt-4"></div>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer class="bg-[#0a0a0a] text-white py-10">
+    <footer class="bg-[#0a0a0a] text-white pt-10 pb-12 md:pb-10">
         <div class="max-w-7xl mx-auto px-6 text-center flex flex-col items-center">
-            <div class="text-2xl font-black tracking-tighter text-white mb-4">
+            <div class="text-xl md:text-2xl font-black tracking-tighter text-white mb-3 md:mb-4">
                 Subhodip<span class="text-teal-600">.</span>
             </div>
-            <p class="text-gray-500 text-sm font-medium tracking-wide">© 2026 Subhodip. Built with precision.</p>
+            <p class="text-gray-500 text-xs md:text-sm font-medium tracking-wide">© 2026 Subhodip. Built with precision.</p>
         </div>
     </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             
+            // --- Sticky Navbar Color Transition ---
+            const mainNav = document.getElementById('main-nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    mainNav.classList.remove('bg-[#fafaf9]/70');
+                    mainNav.classList.add('bg-[#fafaf9]/95', 'shadow-md');
+                } else {
+                    mainNav.classList.remove('bg-[#fafaf9]/95', 'shadow-md');
+                    mainNav.classList.add('bg-[#fafaf9]/70');
+                }
+            });
+
             // --- SpaceX Style Menu Logic ---
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -413,20 +474,16 @@
             const mobileLinks = document.querySelectorAll('.mobile-link');
 
             function toggleMenu() {
-                // Toggle the CSS morphing hamburger to 'X'
                 mobileMenuBtn.classList.toggle('menu-open');
                 
-                // Toggle the full screen fade and slide overlay
                 if (mobileMenu.classList.contains('opacity-0')) {
-                    // Open
                     mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
                     mobileLinksContainer.classList.remove('translate-y-10');
-                    document.body.style.overflow = 'hidden'; // Stop background scrolling
+                    document.body.style.overflow = 'hidden'; 
                 } else {
-                    // Close
                     mobileMenu.classList.add('opacity-0', 'pointer-events-none');
                     mobileLinksContainer.classList.add('translate-y-10');
-                    document.body.style.overflow = 'auto'; // Re-enable background scrolling
+                    document.body.style.overflow = 'auto'; 
                 }
             }
 
@@ -475,6 +532,14 @@
                                 "color": "bg-red-100",
                                 "iconClass": "fas fa-text-height",
                                 "repo": "https://github.com/Subhodip57/ASCII_Generator"
+                            },
+                            {
+                                "id": 4,
+                                "title": "Dev Portfolio",
+                                "category": "Collaborative Group Project",
+                                "color": "bg-indigo-100",
+                                "iconClass": "fas fa-users-cog",
+                                "repo": "https://github.com/Subhodip57"
                             }
                         ]);
                     }, 800);
@@ -485,15 +550,15 @@
                         container.innerHTML = '';
                         data.forEach(project => {
                             const card = `
-                                <a href="${project.repo}" target="_blank" rel="noopener noreferrer" class="block rounded-[2rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-2xl hover:shadow-teal-900/10 hover:-translate-y-2 transition-all duration-300 bg-white border border-gray-100 group cursor-pointer">
-                                    <div class="h-56 w-full ${project.color} p-4 flex items-center justify-center overflow-hidden relative">
+                                <a href="${project.repo}" target="_blank" rel="noopener noreferrer" class="block rounded-[2rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-2xl hover:shadow-teal-900/10 hover:-translate-y-2 transition-all duration-300 bg-white border border-gray-100 group cursor-pointer flex flex-col h-full">
+                                    <div class="h-40 md:h-48 w-full ${project.color} p-4 flex items-center justify-center overflow-hidden relative">
                                         <div class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                        <i class="${project.iconClass} text-teal-800 text-7xl transform group-hover:scale-125 transition-transform duration-500 drop-shadow-md"></i>
+                                        <i class="${project.iconClass} text-teal-800 text-5xl md:text-6xl transform group-hover:scale-125 transition-transform duration-500 drop-shadow-md"></i>
                                     </div>
-                                    <div class="p-8">
-                                        <p class="text-xs font-bold tracking-widest text-teal-600 mb-2 uppercase">${project.category}</p>
-                                        <h3 class="text-2xl font-bold text-gray-900 mb-4">${project.title}</h3>
-                                        <p class="text-sm text-gray-500 flex items-center gap-2 font-bold group-hover:text-teal-600 transition-colors">
+                                    <div class="p-6 md:p-8 flex-grow flex flex-col">
+                                        <p class="text-[10px] md:text-xs font-bold tracking-widest text-teal-600 mb-2 uppercase">${project.category}</p>
+                                        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-4 flex-grow">${project.title}</h3>
+                                        <p class="text-xs md:text-sm text-gray-500 flex items-center gap-2 font-bold group-hover:text-teal-600 transition-colors mt-auto">
                                             View Repository <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
                                         </p>
                                     </div>
@@ -501,11 +566,11 @@
                             `;
                             container.insertAdjacentHTML('beforeend', card);
                         });
-                    }).catch(error => { container.innerHTML = `<p class="text-red-500 text-center col-span-3 font-bold">Failed to load projects. Please refresh.</p>`; });
+                    }).catch(error => { container.innerHTML = `<p class="text-red-500 text-center col-span-1 sm:col-span-2 lg:col-span-4 font-bold text-sm">Failed to load projects. Please refresh.</p>`; });
             }
             loadProjects();
 
-            // --- GOOGLE SHEETS FORM HANDLER ---
+            // --- GOOGLE SHEETS FORM HANDLER w/ JS Validation ---
             const form = document.getElementById('google-sheet-form');
             const submitBtn = document.getElementById('submit-btn');
             const formStatus = document.getElementById('form-status');
@@ -515,12 +580,22 @@
             form.addEventListener('submit', e => {
                 e.preventDefault();
                 
+                const emailInput = document.getElementById('email').value;
+                const messageInput = document.getElementById('message').value;
+                
+                if (!emailInput.includes('@') || messageInput.trim() === '') {
+                    formStatus.className = "text-center text-xs md:text-sm font-bold p-3 md:p-4 rounded-xl mt-4 bg-red-50 border border-red-200 text-red-700 block";
+                    formStatus.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i> Please provide a valid email and message.';
+                    setTimeout(() => { formStatus.classList.add('hidden'); }, 4000);
+                    return;
+                }
+                
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Sending Context...</span>';
                 
                 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                     .then(response => {
-                        formStatus.className = "text-center text-sm font-bold p-4 rounded-xl mt-4 bg-green-50 border border-green-200 text-green-700 block animate-pulse";
+                        formStatus.className = "text-center text-xs md:text-sm font-bold p-3 md:p-4 rounded-xl mt-4 bg-green-50 border border-green-200 text-green-700 block animate-pulse";
                         formStatus.innerHTML = '<i class="fas fa-check-circle mr-2"></i> Message sent successfully!';
                         form.reset();
                         submitBtn.disabled = false;
@@ -528,7 +603,7 @@
                         setTimeout(() => { formStatus.classList.add('hidden'); }, 5000);
                     })
                     .catch(error => {
-                        formStatus.className = "text-center text-sm font-bold p-4 rounded-xl mt-4 bg-red-50 border border-red-200 text-red-700 block";
+                        formStatus.className = "text-center text-xs md:text-sm font-bold p-3 md:p-4 rounded-xl mt-4 bg-red-50 border border-red-200 text-red-700 block";
                         formStatus.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i> Error! Please try again.';
                         submitBtn.disabled = false;
                         submitBtn.innerHTML = '<span>Send Message</span> <i class="fas fa-paper-plane"></i>';
